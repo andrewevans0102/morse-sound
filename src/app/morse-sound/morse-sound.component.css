@@ -1,0 +1,23 @@
+p {
+    padding-bottom: 2em;
+}
+
+h1 {
+    padding-top: 1em;
+}
+
+.morse-text {
+    font-size: 1em;
+}
+
+.morse-value {
+    font-size: 2em;
+}
+
+.output {
+    padding-top: 4em;
+}
+
+.table-heading {
+    font-size: 2em;
+}

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <div>
+          <h1>Morse Generator</h1>
+          <p class="lead">This app creates Morse code and plays it using the Web Audio API (NOTE this does not work on mobile devices)</p>
+          <form (ngSubmit)="onSubmit()" #morseForm="ngForm">
+            <div class="form-group">
+              <label for="name">Enter Text (make sure to have sound turned on)</label>
+              <input type="text" class="form-control" id="morseText" required [(ngModel)]="morseText" name="morseInput" #morseInput="ngModel" pattern="[A-Za-z0-9 ]+">
+              <div [hidden]="morseInput.valid || morseInput.pristine" class="alert alert-danger">
+                Text must only be numbers or letters
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success" [disabled]="!morseForm.form.valid">Submit</button>
+          </form>
+        </div>
+    </div>
+  </div>
+  <div class="row output">
+    <div class="col-sm">
+        <div class="table-heading">Translated Text</div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Entered Text</th>
+                <th scope="col">Morse Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let display of morseDisplay">
+                <td class="morse-text">{{display.morseText}}</td>
+                <td class="morse-value">{{display.morseValue}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>
