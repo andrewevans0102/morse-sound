@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "coverage-report": "ng test --code-coverage --watch=true",
+    "delete-coverage": "rm -rf coverage",
+    "code-coverage": "npm run delete-coverage && npm run coverage-report",
+    "build-prod": "ng build --prod",
+    "test-prod": "ng test --watch=false",
+    "firebase-deploy": "firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -33,7 +39,6 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
-    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.3.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",

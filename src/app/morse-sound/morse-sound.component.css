@@ -21,3 +21,9 @@ h1 {
 .table-heading {
     font-size: 2em;
 }
+
+.header-image { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

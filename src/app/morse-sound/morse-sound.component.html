@@ -2,8 +2,17 @@
   <div class="row">
     <div class="col-sm">
         <div>
-          <h1>Morse Generator</h1>
-          <p class="lead">This app creates Morse code and plays it using the Web Audio API (NOTE this does not work on mobile devices)</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <h1>Morse Sound</h1>
+                <p class="lead">This app plays Morse Code sounds using the Web Audio API (NOTE DOES NOT WORK ON MOBILE DEVICES)</p>
+              </div>
+              <div class="col-sm header-image">
+                <img src='../../assets/header_image.png'>
+              </div>
+            </div>
+          </div>
           <form (ngSubmit)="onSubmit()" #morseForm="ngForm">
             <div class="form-group">
               <label for="name">Enter Text (make sure to have sound turned on)</label>
